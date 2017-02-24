@@ -1,0 +1,29 @@
+//*******************
+//韩信点兵问题，满足多个条件的数字筛选
+//*******************
+
+using System;
+using System.Text;
+
+public class MainClass
+{
+  public static void Main()
+  {
+    Console.WriteLine("满足条件的数字为：");
+    
+    int x = 10000;
+    for(int i = 0; i < x; i++)
+    {
+      if (i%2==1)
+      {
+        if (i%3==0)
+        {
+          if(i%9==0)
+          {
+            Console.WriteLine(i);
+          }
+        }
+      }
+    }
+  }
+}

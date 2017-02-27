@@ -1,0 +1,34 @@
+//封装和类
+
+//c#基础知识
+
+using System;
+
+namespace lesson15
+{
+  public class A 
+  {
+  //封装是面向对象编程的第一步
+  //把方法进行封装，创建了类
+    public void Open()
+      {
+      Console.WriteLine("Open");
+      }
+    public void Close()
+      {
+      Console.WriteLine("Close");
+      }
+  }
+  
+  class MainClass
+  {
+    public static void Main (string[] args)
+    {
+    //封装能保护代码、数据安全性
+    //封装可以屏蔽复杂性
+      A a = new A();
+      a.Open();
+    }
+  }
+  
+}

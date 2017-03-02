@@ -13,6 +13,7 @@ namespace Lesson16
 	//抽象方法只能出现在抽象类中
 	//抽象类不能直接实例化。
 	//抽象类中可以包含普通的方法。
+	// 抽象 abstract;  覆盖 override
 	public abstract class Food
 	{
 		//在父方法中定义的抽象方法不能够实现。{}

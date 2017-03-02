@@ -1,0 +1,67 @@
+/*
+ * Created by SharpDevelop.
+ * User: Administrator
+ * Date: 2017/3/2
+ * Time: 16:20
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+using System;
+
+//静态 static
+//静态的字段、属性或者方法，只能由类调用，不能够由实例调用
+//使用类创建对象的过程叫作 实例化，对象也可以称作实例。
+
+
+//在内存中一共有5个区域
+//	1. 堆区 - 需要程序员手动开辟并管理内存
+//	2. 栈区 - 由系统自动完成内存管理
+//	3. 静态区（全局区）- 程序运行过程中内存中的数据一直存在
+//	4. 常量区 - 用于存放常量
+//	5. 代码区 - 存放程序运行所需要的代码
+
+namespace Lesson17
+{
+	/// <summary>
+	/// Description of Lesson17.
+	/// </summary>
+	
+	public static class Lesson17
+	{
+		//静态方法
+		public static void A()
+		{
+			Console.WriteLine("test");
+		}
+		//静态构造方法
+//		静态构造方法会在首次访问静态类中的成员时调用。
+		static Lesson17()
+		{
+			Console.WriteLine("静态构造方法开始构造");
+		}
+		
+		public static string s = " s test";
+	}
+	
+		public  class B
+	{
+		public  B()
+		{
+			Console.WriteLine("B构造方法开始构造");
+		}
+	}
+		class MainClass {
+		public static void Main(string[] args)
+		{
+			
+		    Lesson17.A();
+	
+			B b = new B ();
+			Lesson17.s = "haha";
+		    Console.WriteLine (Lesson17.s);
+		    
+			Console.ReadKey(true);
+		}
+	}
+}
+
